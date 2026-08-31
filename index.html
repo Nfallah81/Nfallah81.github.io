@@ -6,7 +6,6 @@
     <title>نازنین فلاح | وب‌سایت رسمی</title>
     <meta name="description" content="وب‌سایت رسمی نازنین فلاح، دانشجوی کارشناسی آمار در دانشگاه فردوسی مشهد.">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
@@ -27,9 +26,35 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 24px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2.5rem 3rem;
             max-width: 650px;
             width: 90%;
+        }
+        
+        /* قاب عکس مربعی */
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 20px;
+            border: 3px solid #007bff;
+            background: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-frame .placeholder {
+            font-size: 0.8rem;
+            color: #999;
         }
         
         h1 {
@@ -77,7 +102,7 @@
             margin: 0;
         }
         
-        /* بخش علاقه‌مندی‌ها و مهارت‌ها */
+        /* بخش علاقه‌مندی‌ها */
         .skills {
             margin-top: 2rem;
             text-align: center;
@@ -108,32 +133,30 @@
             background: #f8f9fa;
         }
         
-        .skill-item i {
-            color: #007bff;
-            font-size: 1rem;
-        }
-        
-        /* لینک‌های اجتماعی با آیکون‌های واقعی */
+        /* لینک‌های اجتماعی */
         .social-links {
             margin-top: 2.5rem;
             display: flex;
             justify-content: center;
             gap: 1rem;
         }
-        
         .social-btn {
-            display: inline-flex;
+            display: inline-block;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            width: auto;
+            height: auto;
+            border-radius: 50px;
+            font-size: 0.9rem;
             color: #fff;
             text-decoration: none;
             transition: all 0.3s ease;
+            padding: 0.7rem 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-btn.instagram {
             background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         .social-btn.threads {
@@ -144,19 +167,23 @@
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
-        
-        .social-btn i {
-            font-size: 1.3rem;
-        }
     </style>
 </head>
 <body>
     <div class="card">
+        <!-- قاب عکس مربعی (جای عکس شما) -->
+        <div class="photo-frame">
+            <!-- تا زمانی که عکس آپلود نشده، این متن نمایش داده می‌شود -->
+            <span class="placeholder">جای عکس شما</span>
+            <!-- وقتی عکس آپلود شد، این خط را جایگزین کنید: -->
+            <!-- <img src="لینک_عکس_شما" alt="نازنین فلاح"> -->
+        </div>
+        
         <h1>نازنین فلاح</h1>
         <p class="role">دانشجوی کارشناسی آمار</p>
         <p class="university">دانشگاه فردوسی مشهد</p>
         
-        <!-- بخش درباره من و آمار -->
+        <!-- بخش درباره من و علم آمار -->
         <div class="about">
             <h2>درباره من و علم آمار</h2>
             <p>
@@ -171,10 +198,10 @@
         <div class="skills">
             <h2>علاقه‌مندی‌ها</h2>
             <div class="skill-items">
-                <span class="skill-item"><i class="fas fa-chart-line"></i> تحلیل داده</span>
-                <span class="skill-item"><i class="fas fa-book-open"></i> نویسندگی</span>
-                <span class="skill-item"><i class="fas fa-calculator"></i> آمار و احتمال</span>
-                <span class="skill-item"><i class="fas fa-brain"></i> یادگیری ماشین</span>
+                <span class="skill-item">تحلیل داده</span>
+                <span class="skill-item">نویسندگی</span>
+                <span class="skill-item">آمار و احتمال</span>
+                <span class="skill-item">یادگیری ماشین</span>
             </div>
         </div>
         
@@ -183,12 +210,8 @@
         </p>
         
         <div class="social-links">
-            <a href="https://instagram.com/n.fallah13.81" target="_blank" class="social-btn" title="اینستاگرام">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://threads.net/@n.fallah13.81" target="_blank" class="social-btn threads" title="تردز">
-                <i class="fab fa-threads"></i>
-            </a>
+            <a href="https://instagram.com/n.fallah13.81" target="_blank" class="social-btn instagram">اینستاگرام</a>
+            <a href="https://threads.net/@n.fallah13.81" target="_blank" class="social-btn threads">تردز</a>
         </div>
     </div>
 </body>
