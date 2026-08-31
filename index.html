@@ -1,107 +1,60 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نازنین فلاح | وب‌سایت رسمی</title>
-    <meta name="description" content="وب‌سایت رسمی نазنین فلاح، دانشجوی کارشناسی آمار در دانشگاه فردوسی مشهد.">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* پس زمینه گرادیانی تیره */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            color: #fff;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
-        /* افکت درخشش نئونی */
-        h1 {
-            font-weight: 700;
-            font-size: 2.5rem;
-            text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 40px #8a2be2;
-            margin-bottom: 0.5rem;
-            animation: glow 2s ease-in-out infinite alternate;
+        .social-btn.threads {
+            background: #000;
         }
         
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
-            to { text-shadow: 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 60px #00d2ff; }
+        .social-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
-
-        .role {
-            font-weight: 400;
+        
+        .social-btn i {
             font-size: 1.3rem;
-            color: #00d2ff;
-            margin: 0.3rem 0;
-        }
-        
-        .university {
-            font-weight: 300;
-            font-size: 1rem;
-            color: #a8a8a8;
-            margin: 0;
-        }
-        
-        .quote {
-            font-weight: 300;
-            font-size: 1.1rem;
-            color: #d1d1d1;
-            margin-top: 2rem;
-            max-width: 600px;
-            line-height: 1.8;
-        }
-        
-        .inspiring {
-            font-weight: 300;
-            font-size: 0.9rem;
-            color: #8a8a8a;
-            font-style: italic;
-            margin-top: 1rem;
-        }
-        
-        .links {
-            margin-top: 2.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            border: 2px solid #00d2ff;
-            border-radius: 50px;
-            padding: 0.7rem 2rem;
-            display: inline-block;
-            transition: all 0.4s ease;
-        }
-        
-        a:hover {
-            background-color: #00d2ff;
-            color: #0f0c29;
-            box-shadow: 0 0 20px #00d2ff;
         }
     </style>
 </head>
 <body>
-    <h1>نازنین فلاح</h1>
-    <p class="role">دانشجوی کارشناسی آمار</p>
-    <p class="university">دانشگاه فردوسی مشهد</p>
-    
-    <p class="quote">پژوهشگر و علاقه‌مند به تحلیل داده‌ها؛ باورمند به قدرت آمار در کشف الگوهای پنهان و ترجمه‌ی زبان پیچیده‌ی اعداد به داستان‌هایی قابل درک برای همه.</p>
-    
-    <p class="inspiring">"در نهایت، تمامی دانش به آمار وابسته است؛ چرا که آمار، علمِ استخراج معنا از داده‌هاست."</p>
-    
-    <div class="links">
-        <a href="https://instagram.com/n.fallah13.81" target="_blank">اینستاگرام</a>
-        <a href="https://threads.net/@n.fallah13.81" target="_blank">تردز</a>
+    <div class="card">
+        <h1>نازنین فلاح</h1>
+        <p class="role">دانشجوی کارشناسی آمار</p>
+        <p class="university">دانشگاه فردوسی مشهد</p>
+        
+        <!-- بخش درباره من و آمار -->
+        <div class="about">
+            <h2>درباره من و علم آمار</h2>
+            <p>
+                آمار، زبانِ گویای داده‌هاست؛ علمی که به ما می‌آموزد چگونه از دلِ آشفتگیِ اعداد، نظم و معنا استخراج کنیم. 
+                من به‌عنوان دانشجوی آمار، به قدرتِ این علم در کشفِ الگوهای پنهان و پیش‌بینیِ آینده اعتقاد دارم. 
+                به نویسندگی علاقه‌مندم و معتقدم هر داده، یک داستان برای گفتن دارد؛ داستانی که با تحلیلِ درست، می‌تواند به تصمیم‌گیری‌های هوشمندانه و روشن‌تر شدنِ جهان کمک کند. 
+                هدف من این است که زبانِ پیچیده‌ی اعداد را به زبانی ساده و قابل‌درک برای همه ترجمه کنم.
+            </p>
+        </div>
+        
+        <!-- بخش علاقه‌مندی‌ها -->
+        <div class="skills">
+            <h2>علاقه‌مندی‌ها</h2>
+            <div class="skill-items">
+                <span class="skill-item"><i class="fas fa-chart-line"></i> تحلیل داده</span>
+                <span class="skill-item"><i class="fas fa-book-open"></i> نویسندگی</span>
+                <span class="skill-item"><i class="fas fa-calculator"></i> آمار و احتمال</span>
+                <span class="skill-item"><i class="fas fa-brain"></i> یادگیری ماشین</span>
+            </div>
+        </div>
+        
+        <p class="inspiring" style="margin-top: 1.5rem; color: #888; font-size: 0.85rem; font-style: italic;">
+            "در نهایت، تمامی دانش به آمار وابسته است؛ چرا که آمار، علمِ استخراج معنا از داده‌هاست."
+        </p>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/n.fallah13.81" target="_blank" class="social-btn" title="اینستاگرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://threads.net/@n.fallah13.81" target="_blank" class="social-btn threads" title="تردز">
+                <i class="fab fa-threads"></i>
+            </a>
+        </div>
     </div>
 </body>
 </html>
