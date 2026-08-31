@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <!-- ================== SEO (بهینه‌سازی برای گوگل) ================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نازنین فلاح | وب‌سایت رسمی</title>
-    <meta name="description" content="وب‌سایت رسمی نازنین فلاح، دانشجوی کارشناسی آمار در دانشگاه فردوسی مشهد.">
+    <title>نازنین فلاح | وب‌سایت رسمی | آمار و تحلیل داده</title>
+    <meta name="description" content="وب‌سایت رسمی نازنین فلاح، دانشجوی کارشناسی آمار در دانشگاه فردوسی مشهد. شامل معرفی، وبلاگ مقالات آمار و راه‌های ارتباطی.">
+    <meta name="keywords" content="نازنین فلاح, آمار, دانشگاه فردوسی مشهد, تحلیل داده, وبلاگ آمار, مقالات علمی">
+    <meta name="author" content="نازنین فلاح">
+    <meta name="robots" content="index, follow">
+    
+    <!-- فونت و استایل -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* ================== استایل اصلی ================== */
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #e0e7ff, #f0f4f8, #ffffff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             margin: 0;
-            text-align: center;
+            padding: 0;
             color: #333;
-            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
-        /* کارت اصلی پروفایل */
+        /* ================== Header ================== */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #007bff, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        
+        /* ================== Main Layout (با Sidebar) ================== */
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* ================== کارت‌ها و بخش‌ها ================== */
         .card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            padding: 2.5rem 2.5rem 3rem;
-            max-width: 650px;
-            width: 90%;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        /* قاب عکس مربعی */
+        .profile-section {
+            text-align: center;
+        }
+        
         .photo-frame {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 1.5rem;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
             border-radius: 20px;
             border: 3px solid #007bff;
             background: #f0f4f8;
@@ -43,7 +130,6 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         
         .photo-frame img {
@@ -52,21 +138,16 @@
             object-fit: cover;
         }
         
-        .photo-frame .placeholder {
-            font-size: 0.8rem;
-            color: #999;
-        }
-        
-        h1 {
+        .profile-section h1 {
             font-weight: 700;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #333;
             margin-bottom: 0.3rem;
         }
         
         .role {
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #007bff;
             margin: 0.3rem 0;
         }
@@ -78,141 +159,223 @@
             margin: 0;
         }
         
-        /* بخش معرفی و متن ادبی */
-        .about {
-            margin-top: 2rem;
-            text-align: right;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            padding: 1.5rem 0;
-        }
-        
-        .about h2 {
+        /* ================== Sidebar content ================== */
+        .sidebar h3 {
             font-size: 1.1rem;
             color: #007bff;
-            margin-bottom: 0.8rem;
-            text-align: center;
-        }
-        
-        .about p {
-            font-weight: 400;
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 2;
-            margin: 0;
-        }
-        
-        /* بخش علاقه‌مندی‌ها */
-        .skills {
-            margin-top: 2rem;
-            text-align: center;
-        }
-        
-        .skills h2 {
-            font-size: 1.1rem;
-            color: #007bff;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
         
-        .skill-items {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         
-        .skill-item {
-            display: inline-flex;
+        .sidebar li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .sidebar a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .sidebar a:hover {
+            color: #007bff;
+        }
+        
+        /* ================== Blog Section ================== */
+        .blog-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .blog-card {
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 1.5rem;
+            background: #fafafa;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-color: #007bff;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0 0 0.5rem;
+        }
+        
+        .blog-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .blog-card .read-more {
+            display: inline-block;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        /* ================== Contact Section ================== */
+        .contact-section {
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
             align-items: center;
             gap: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #555;
-            background: #f8f9fa;
         }
         
-        /* لینک‌های اجتماعی */
-        .social-links {
-            margin-top: 2.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .social-btn {
-            display: inline-block;
-            align-items: center;
-            justify-content: center;
-            width: auto;
-            height: auto;
-            border-radius: 50px;
+        /* ================== Footer ================== */
+        footer {
+            background: rgba(20, 20, 30, 0.95);
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem;
             font-size: 0.9rem;
-            color: #fff;
+        }
+        
+        footer a {
+            color: #007bff;
             text-decoration: none;
-            transition: all 0.3s ease;
-            padding: 0.7rem 1.8rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .social-btn.instagram {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-        }
-        
-        .social-btn.threads {
-            background: #000;
-        }
-        
-        .social-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <!-- قاب عکس مربعی (جای عکس شما) -->
-        <div class="photo-frame">
-            <!-- تا زمانی که عکس آپلود نشده، این متن نمایش داده می‌شود -->
-            <span class="placeholder">جای عکس شما</span>
-            <!-- وقتی عکس آپلود شد، این خط را جایگزین کنید: -->
-            <!-- <img src="لینک_عکس_شما" alt="نازنین فلاح"> -->
-        </div>
-        
-        <h1>نازنین فلاح</h1>
-        <p class="role">دانشجوی کارشناسی آمار</p>
-        <p class="university">دانشگاه فردوسی مشهد</p>
-        
-        <!-- بخش درباره من و علم آمار -->
-        <div class="about">
-            <h2>درباره من و علم آمار</h2>
-            <p>
-                آمار، زبانِ گویای داده‌هاست؛ علمی که به ما می‌آموزد چگونه از دلِ آشفتگیِ اعداد، نظم و معنا استخراج کنیم. 
-                من به‌عنوان دانشجوی آمار، به قدرتِ این علم در کشفِ الگوهای پنهان و پیش‌بینیِ آینده اعتقاد دارم. 
-                به نویسندگی علاقه‌مندم و معتقدم هر داده، یک داستان برای گفتن دارد؛ داستانی که با تحلیلِ درست، می‌تواند به تصمیم‌گیری‌های هوشمندانه و روشن‌تر شدنِ جهان کمک کند. 
-                هدف من این است که زبانِ پیچیده‌ی اعداد را به زبانی ساده و قابل‌درک برای همه ترجمه کنم.
-            </p>
-        </div>
-        
-        <!-- بخش علاقه‌مندی‌ها -->
-        <div class="skills">
-            <h2>علاقه‌مندی‌ها</h2>
-            <div class="skill-items">
-                <span class="skill-item">تحلیل داده</span>
-                <span class="skill-item">نویسندگی</span>
-                <span class="skill-item">آمار و احتمال</span>
-                <span class="skill-item">یادگیری ماشین</span>
-            </div>
-        </div>
-        
-        <p class="inspiring" style="margin-top: 1.5rem; color: #888; font-size: 0.85rem; font-style: italic;">
-            "در نهایت، تمامی دانش به آمار وابسته است؛ چرا که آمار، علمِ استخراج معنا از داده‌هاست."
-        </p>
-        
-        <div class="social-links">
-            <a href="https://instagram.com/n.fallah13.81" target="_blank" class="social-btn instagram">اینستاگرام</a>
-            <a href="https://threads.net/@n.fallah13.81" target="_blank" class="social-btn threads">تردز</a>
-        </div>
-    </div>
+
+    <!-- ================== HEADER (لوگو و منو) ================== -->
+    <li><a href="#">یادگیری ماشین</a></li>
+            </ul>
+            
+            <h3>دسته‌بندی محصولات</h3>
+            <ul>
+                <li><a href="#">جزوه‌های آموزشی</a></li>
+                <li><a href="#">پروژه‌های آماری</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- ================== FOOTER ================== -->
+    <footer>
+        <p>© 2026 نازنین فلاح. تمامی حقوق محفوظ است. | ساخته شده با <a href="#">GitHub Pages</a></p>
+    </footer>
+
 </body>
 </html>
+<header>
+        <a href="#" class="logo">
+            <div class="logo-icon">ن</div>
+            نازنین فلاح
+        </a>
+        <nav class="nav-links">
+            <a href="#home">خانه</a>
+            <a href="#about">درباره من</a>
+            <a href="#blog">وبلاگ</a>
+            <a href="#contact">تماس با ما</a>
+        </nav>
+    </header>
+
+    <!-- ================== MAIN (محتوای اصلی + سایدبار) ================== -->
+    <main>
+        <!-- محتوای اصلی (سمت راست) -->
+        <div class="content-area">
+            
+            <!-- بخش خانه و پروفایل -->
+            <section id="home" class="card profile-section">
+                <div class="photo-frame">
+                    <!-- جای عکس شما -->
+                    <span style="color: #999; font-size: 0.8rem;">جای عکس</span>
+                    <!-- <img src="لینک عکس" alt="نازنین فلاح"> -->
+                </div>
+                <h1>نازنین فلاح</h1>
+                <p class="role">دانشجوی کارشناسی آمار</p>
+                <p class="university">دانشگاه فردوسی مشهد</p>
+                <p style="margin-top: 1rem; line-height: 1.8; font-size: 0.9rem; color: #555; text-align: justify;">
+                    آمار، زبانِ گویای داده‌هاست؛ علمی که به ما می‌آموزد چگونه از دلِ آشفتگیِ اعداد، نظم و معنا استخراج کنیم.
+                    من به‌عنوان دانشجوی آمار، به قدرتِ این علم در کشفِ الگوهای پنهان و پیش‌بینیِ آینده اعتقاد دارم. به نویسندگی علاقه‌مندم و معتقدم هر داده، یک داستان برای گفتن دارد.
+                </p>
+            </section>
+            
+            <!-- بخش درباره ما -->
+            <section id="about" class="card">
+                <h2 style="color: #007bff; margin-bottom: 1rem;">درباره من</h2>
+                <p style="line-height: 2; color: #555;">
+                    من نازنین فلاح هستم، دانشجوی کارشناسی آمار در دانشگاه فردوسی مشهد. علاقه‌مند به تحلیل داده، آمار و احتمال و یادگیری ماشین هستم.
+                    هدف من این است که زبان پیچیده‌ی اعداد را به زبانی ساده و قابل‌درک برای همه ترجمه کنم.
+                </p>
+            </section>
+            
+            <!-- بخش وبلاگ -->
+            <section id="blog" class="card blog-section">
+                <h2>وبلاگ (مقالات)</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <h3>چرا آمار مهم است؟</h3>
+                        <p>آمار به ما کمک می‌کند تا تصمیم‌های بهتری بگیریم و دنیای اطرافمان را بهتر درک کنیم...</p>
+                        <a href="#" class="read-more">ادامه مطلب</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3>مقدمه‌ای بر تحلیل داده</h3>
+                        <p>تحلیل داده فرآیند پاک‌سازی، تبدیل و مدل‌سازی داده‌ها برای کشف اطلاعات مفید است...</p>
+                        <a href="#" class="read-more">ادامه مطلب</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- بخش تماس با ما -->
+            <section id="contact" class="card contact-section">
+                <h2>تماس با ما</h2>
+                <p style="color: #555;">برای ارتباط با من، می‌توانید از طریق شبکه‌های اجتماعی زیر اقدام کنید:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>اینستاگرام:</strong> n.fallah13.81
+                    </div>
+                    <div class="contact-item">
+                        <strong>تردز:</strong> @n.fallah13.81
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- سایدبار (سمت چپ) -->
+        <aside class="sidebar">
+            <h3>دسته‌بندی مقالات</h3>
+            <ul>
+                <li><a href="#">آمار و احتمال</a></li>
+                <li><a href="#">تحلیل داده</a></li>
+                <li><a href="#">نویسندگی</a></li>
